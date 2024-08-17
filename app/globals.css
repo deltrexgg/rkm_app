@@ -1,0 +1,118 @@
+body{
+    margin: 0px;
+    background-color: rgb(199, 255, 224);
+}
+
+.teacher-input{
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+}
+
+.pghead{
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+.plusbox{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 7px;
+}
+
+.todash{
+    padding: 10px;
+    justify-content: end;
+    float: right;
+}
+
+.verify{
+    width: 100px;
+    height: 30px;
+    font-weight: bolder;
+    border-radius: 15px;
+    background-color: chartreuse;
+}
+
+.login-container{
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 10px;
+    background-color: aliceblue;
+}
+
+.login-input{
+    height: 30px;
+    border-radius: 10px;
+    
+}
+
+.dashhead{
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+.logbtn{
+    text-align: center;
+    border-radius: 5px;
+    padding: 2px;
+    cursor: pointer;
+    background-color: rgb(255, 113, 113);
+}
+
+.add{
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 15px;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.score-input{
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+}
+
+.addscore{
+    width: 60px;
+    height: 50px;
+    background-color: chartreuse;
+    border-radius: 5px;
+    box-shadow: 1px 1px;
+}
+
+.removescore{
+    border-radius: 5px;
+    width: 60px;
+    height: 50px;
+    background-color: red;
+    box-shadow: 1px 1px;
+}
+
+.addteach{
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+    background-color: chartreuse;
+    box-shadow: 1px 1px;
+}
+
+.action-div{
+    float: right;
+    justify-content: end;
+}
