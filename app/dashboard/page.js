@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import AddTeacher from '../components/AddTeacher'
 import AddScore from '../components/AddScore'
+import TeacherApprove from '../components/TeacherApprove'
 
 function Dashboard() {
 
@@ -35,7 +36,7 @@ function Dashboard() {
                 </div>
             </div>
             <AddScore />
-            {admin && <AddTeacher />}
+            {admin && <TeacherApprove />}
         </>
     )
 }
