@@ -120,3 +120,29 @@ body{
 .addteachbtn{
 
 }
+
+.list-container{
+    box-shadow: 2px 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15x;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.list-container {
+    display: flex;
+    justify-content: center;
+}
+
+.centered-table {
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table horizontally */
+}
+
+.centered-table td {
+    padding: 8px; /* Add some padding to the cells if needed */
+}
