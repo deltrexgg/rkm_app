@@ -1,6 +1,12 @@
 // utils/dateUtils.js
-export function getWeekStartEndDate() {
-    const today = new Date();
+export function getWeekStartEndDate(data) {
+    let today;
+    if(!data){
+        today = new Date();
+    }else{
+        today = data
+    }
+    //const today = new Date();
 
     const dayOfWeek = today.getDay();
     const startOfWeek = new Date(today);

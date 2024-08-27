@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import AddTeacher from '../components/AddTeacher'
 import AddScore from '../components/AddScore'
 import TeacherApprove from '../components/TeacherApprove'
+import MyClass from '../components/MyClass'
 
 function Dashboard() {
 
@@ -35,6 +36,7 @@ function Dashboard() {
                     <span onClick={logout} className='logbtn'>Logout</span>
                 </div>
             </div>
+            <MyClass />
             <AddScore />
             {admin && <TeacherApprove />}
         </>

@@ -31,6 +31,11 @@ function AddScore() {
       return;
     }
 
+    if(localStorage.getItem('myclass') == classValue+division.toUpperCase()){
+      setError('Cannot grade your class')
+      return;
+    }
+
     try {
       const classRef = doc(db, 'scores', classValue+division.toUpperCase());
       const docSnap = await getDoc(classRef);
@@ -92,6 +97,11 @@ function AddScore() {
 
     if(classValue > 12){
       setError('Invalid Class');
+      return;
+    }
+
+    if(localStorage.getItem('myclass') == classValue+division.toUpperCase()){
+      setError('Cannot grade your class')
       return;
     }
 
