@@ -146,3 +146,8 @@ body{
 .centered-table td {
     padding: 8px; /* Add some padding to the cells if needed */
 }
+
+.selector{
+    border-radius: 10px;
+    padding: 6px;
+}

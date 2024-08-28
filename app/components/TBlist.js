@@ -7,8 +7,7 @@ import { getWeekStartEndDate, formatDate } from '@/utils/dateUtils'; // Ensure t
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { format, startOfWeek, endOfWeek } from 'date-fns';
-
-function ScoreList() {
+function TBlist() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -27,6 +26,7 @@ function ScoreList() {
             return `${formatDate(startOfWeek)}-${formatDate(endOfWeek)}`;
         }else if(optBranch === 'year'){
             return format(date, 'yyyy')
+            console.log(date)
         }
     };
 
@@ -36,7 +36,7 @@ function ScoreList() {
             const dataRange = formatToAPIFormat(selectedDate);
 
             // Fetch documents from 'scores' collection
-            const scoresCollection = collection(db, "scores");
+            const scoresCollection = collection(db, "tiebreaker");
             const querySnapshot = await getDocs(scoresCollection);
 
             // Process each document
@@ -121,7 +121,7 @@ function ScoreList() {
             <div>
                 {data.length > 0 ? (
                     data.map(doc => (
-                        <div key={doc.id} className='list-container'>
+                        <div key={doc.id} >
                             <table className='centered-table'>
                                 <tbody>
                                     <tr>
@@ -141,4 +141,4 @@ function ScoreList() {
     );
 }
 
-export default ScoreList;
+export default TBlist

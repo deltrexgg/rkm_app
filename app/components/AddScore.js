@@ -26,7 +26,7 @@ function AddScore() {
       return;
     }
 
-    if(classValue > 12){
+    if(classValue > 12 || classValue < 5 ){
       setError('Invalid Class');
       return;
     }
@@ -95,7 +95,7 @@ function AddScore() {
       return;
     }
 
-    if(classValue > 12){
+    if(classValue > 12 || classValue < 5){
       setError('Invalid Class');
       return;
     }

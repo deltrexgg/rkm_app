@@ -5,8 +5,12 @@ import AddTeacher from '../components/AddTeacher'
 import AddScore from '../components/AddScore'
 import TeacherApprove from '../components/TeacherApprove'
 import MyClass from '../components/MyClass'
+import { useRouter } from 'next/navigation'
+import TBmark from '../components/TBmark'
 
 function Dashboard() {
+
+    const route = useRouter();
 
     const [user, setUser] = useState('')
     const [admin, setAdmin] = useState(false)
@@ -21,9 +25,8 @@ function Dashboard() {
 
     const logout = () => {
         if (confirm("Do you want to logout")) {
-          localStorage.setItem('admin', '')
-          localStorage.setItem('user', '')
-            window.location.href = '/'
+            localStorage.clear();
+            route.push('/')
         }
     }
 
@@ -38,6 +41,7 @@ function Dashboard() {
             </div>
             <MyClass />
             <AddScore />
+            <TBmark />
             {admin && <TeacherApprove />}
         </>
     )
