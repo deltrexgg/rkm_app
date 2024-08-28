@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import db from '@/utils/firestore';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 function Register() {
     const [username, setUsername] = useState('');
@@ -81,6 +82,7 @@ function Register() {
                 /><br/><br/>
                 <button className='verify' onClick={register}>Apply</button>
                 <br/> <br />
+                <Link href='/'>Go back</Link><br/><br/>
                 <i>After registeration wait for the Admin's approval for Login</i>
             </div>
         </>

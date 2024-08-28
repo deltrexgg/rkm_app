@@ -62,7 +62,6 @@ function TeacherApprove() {
             // Update the local state to remove the document from the list
             setData(data.filter(doc => doc.id !== id));
 
-            console.log(`Document with ID ${id} moved successfully.`);
         } catch (e) {
             console.error("Error moving document: ", e);
             setError(e);
@@ -83,9 +82,9 @@ function TeacherApprove() {
             <div>
                 {data.map(doc => (
                     <div key={doc.id}>
-                        {doc.email} <br /><br />
-                        <button className='addteachbtn' onClick={() => moveDocument(doc.id)}>Add</button> &nbsp;
-                        <button className='remteacher' onClick={() => removereq(doc.id)}>Remove</button>
+                        {doc.email}&nbsp;&nbsp;&nbsp; 
+                        <button className='addteachbtn' onClick={() => moveDocument(doc.id)}>+ Add</button> &nbsp;
+                        <button className='remteacherbtn' onClick={() => removereq(doc.id)}>Remove</button><br /><br />
                     </div>
                 ))}
             </div>

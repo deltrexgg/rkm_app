@@ -30,19 +30,24 @@ function Dashboard() {
         }
     }
 
+    const handleReq = () => {
+        route.push('/reqlist');
+    }
+
     return (
         <>
             <div className='dashhead'>
                 {user}
                 <div className='action-div'>
+                {admin && (<button className='reqbtn' onClick={handleReq}>Request</button>)} &nbsp;
                     <Link href='/'>Leaderboard</Link> &nbsp;
                     <span onClick={logout} className='logbtn'>Logout</span>
                 </div>
             </div>
             <MyClass />
             <AddScore />
-            <TBmark />
-            {admin && <TeacherApprove />}
+            {admin && (<TBmark />)}
+            
         </>
     )
 }
