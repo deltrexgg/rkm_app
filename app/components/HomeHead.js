@@ -1,12 +1,16 @@
 "use client"
 
+import { useRouter } from "next/navigation"
+
 function HomeHead() {
+
+  const route = useRouter();
 
   const auth = () => {
     if(!localStorage.getItem('user')){
-      window.location.href = '/login'
+      route.push('/login')
     }else{
-      window.location.href = '/dashboard'
+      route.push('/dashboard')
     }
   }
 
