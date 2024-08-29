@@ -4,11 +4,14 @@ import { useState } from 'react';
 import Link from 'next/link';
 import db from '@/utils/firestore';
 import { collection, query, where, getDocs } from 'firebase/firestore';
+import { useRouter } from 'next/navigation';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+
+  const route = useRouter()
 
   const login = async () => {
     try {
@@ -24,7 +27,7 @@ function Login() {
           localStorage.setItem('admin', userDoc.admin)
           localStorage.setItem('user', userDoc.username)
           localStorage.setItem('email', userDoc.email)
-          window.location.href = '/dashboard'
+          route.push('/dashboard')
         } else {
           setMessage('Incorrect password.');
         }
