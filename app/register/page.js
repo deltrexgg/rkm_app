@@ -83,7 +83,7 @@ function Register() {
                 <button className='verify' onClick={register}>Apply</button>
                 <br/> <br />
                 <Link href='/'>Go back</Link><br/><br/>
-                <i>After registeration wait for the Admin's approval for Login</i>
+                <i>After registeration wait for the Admin approval for Login</i>
             </div>
         </>
     );
