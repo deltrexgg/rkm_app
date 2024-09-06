@@ -5,6 +5,7 @@ import Link from 'next/link';
 import db from '@/utils/firestore';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
+import HomeHead from '../components/HomeHead';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -41,7 +42,7 @@ function Login() {
   };
 
   return (
-    <>
+    <><HomeHead />
       <div className='login-container'>
         <h3>Login</h3>
         <input

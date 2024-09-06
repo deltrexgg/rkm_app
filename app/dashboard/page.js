@@ -1,9 +1,6 @@
 'use client'
-import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import AddTeacher from '../components/AddTeacher'
 import AddScore from '../components/AddScore'
-import TeacherApprove from '../components/TeacherApprove'
 import MyClass from '../components/MyClass'
 import { useRouter } from 'next/navigation'
 import TBmark from '../components/TBmark'
@@ -40,7 +37,6 @@ function Dashboard() {
                 {user}
                 <div className='action-div'>
                 {admin && (<button className='reqbtn' onClick={handleReq}>Request</button>)} &nbsp;
-                    <Link href='/'>Leaderboard</Link> &nbsp;
                     <span onClick={logout} className='logbtn'>Logout</span>
                 </div>
             </div>

@@ -17,7 +17,6 @@ function HomeHead() {
   return (
     <div className="pghead">
         <h3>RK Mission HSS </h3>
-            <div className="todash"><button onClick={auth}>Update Score</button></div>
     </div>
   )
 }

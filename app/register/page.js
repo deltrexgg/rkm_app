@@ -5,12 +5,16 @@ import { collection, addDoc } from 'firebase/firestore';
 import db from '@/utils/firestore';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import HomeHead from '../components/HomeHead';
 
 function Register() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [email, setEmail] = useState('');
+    const [division, setDivision] = useState();
+    const [myclass, setMyclass] = useState();
+    
 
     const router = useRouter();
 
@@ -49,7 +53,7 @@ function Register() {
     };
 
     return (
-        <>
+        <><HomeHead />
             <div className='login-container'>
                 <h3>Register</h3>
                 <input
@@ -79,6 +83,21 @@ function Register() {
                     placeholder='Confirm Password'
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
+                /><br/><br/>
+                <i>(*If you have class charge or leave it blank)</i>
+                <input
+                    className='login-input'
+                    type='number'
+                    placeholder='Class'
+                    value={myclass}
+                    onChange={(e) => setMyclass(e.target.value)}
+                /><br/><br/>
+                <input
+                    className='login-input'
+                    type='text'
+                    placeholder='Division'
+                    value={division}
+                    onChange={(e) => setDivision(e.target.value)}
                 /><br/><br/>
                 <button className='verify' onClick={register}>Apply</button>
                 <br/> <br />

@@ -15,7 +15,6 @@ function Reqlist() {
 <>
 <div className='dashhead'>
                 <div className='action-div'>
-                <Link href='/'>Leaderboard</Link> &nbsp;
                     <button onClick={handlegoback}>Go Back</button>
                 </div>
             </div>
