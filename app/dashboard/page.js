@@ -30,13 +30,16 @@ function Dashboard() {
     const handleReq = () => {
         route.push('/reqlist');
     }
-
+    const handlescore = () => {
+        route.push('/score')
+    }
     return (
         <>
             <div className='dashhead'>
                 {user}
                 <div className='action-div'>
-                {admin && (<button className='reqbtn' onClick={handleReq}>Request</button>)} &nbsp;
+                {admin && (<><button className='reqbtn' onClick={handleReq}>Request</button>&nbsp; 
+                <button className='reqbtn' onClick={handlescore}>Score</button></>)} &nbsp;
                     <span onClick={logout} className='logbtn'>Logout</span>
                 </div>
             </div>

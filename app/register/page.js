@@ -12,9 +12,8 @@ function Register() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [email, setEmail] = useState('');
-    const [division, setDivision] = useState();
-    const [myclass, setMyclass] = useState();
-    
+    const [division, setDivision] = useState('');
+    const [myclass, setMyclass] = useState('');
 
     const router = useRouter();
 
@@ -37,12 +36,17 @@ function Register() {
             return;
         }
 
+        // Set default values if myclass or division is empty
+        const formattedClass = myclass ? myclass : "";
+        const formattedDivision = division ? division.toUpperCase() : "";
+        
         try {
             const docRef = await addDoc(collection(db, "teacherreq"), {
                 username: username,
                 password: password,
                 email: email,
                 admin: false,
+                myclass: formattedClass + formattedDivision
             });
             console.log("Document written with ID: ", docRef.id);
             router.push('/')
@@ -53,7 +57,8 @@ function Register() {
     };
 
     return (
-        <><HomeHead />
+        <>
+            <HomeHead />
             <div className='login-container'>
                 <h3>Register</h3>
                 <input
@@ -102,7 +107,7 @@ function Register() {
                 <button className='verify' onClick={register}>Apply</button>
                 <br/> <br />
                 <Link href='/'>Go back</Link><br/><br/>
-                <i>After registeration wait for the Admin approval for Login</i>
+                <i>After registration wait for the Admin approval for Login</i>
             </div>
         </>
     );

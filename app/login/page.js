@@ -28,6 +28,7 @@ function Login() {
           localStorage.setItem('admin', userDoc.admin)
           localStorage.setItem('user', userDoc.username)
           localStorage.setItem('email', userDoc.email)
+          localStorage.setItem('myclass', userDoc.myclass)
           route.push('/dashboard')
         } else {
           setMessage('Incorrect password.');
@@ -43,6 +44,11 @@ function Login() {
 
   return (
     <><HomeHead />
+    <div className='qoute'>
+    <i>Clean surroundings
+are my right..
+Keeping it clean is my responsibility.</i>
+    </div>
       <div className='login-container'>
         <h3>Login</h3>
         <input

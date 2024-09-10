@@ -16,7 +16,7 @@ function HomeHead() {
 
   return (
     <div className="pghead">
-        <h3>RK Mission HSS </h3>
+        <h3>RK Mission HSS Kozhikode</h3>
     </div>
   )
 }
