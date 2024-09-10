@@ -45,9 +45,7 @@ function Login() {
   return (
     <><HomeHead />
     <div className='qoute'>
-    <i>Clean surroundings
-are my right..
-Keeping it clean is my responsibility.</i>
+    <i>Clean surroundings are my right.. Keeping it clean is my responsibility.</i>
     </div>
       <div className='login-container'>
         <h3>Login</h3>

@@ -4,6 +4,7 @@ import AddScore from '../components/AddScore'
 import MyClass from '../components/MyClass'
 import { useRouter } from 'next/navigation'
 import TBmark from '../components/TBmark'
+import ChangeClass from '../components/ChangeClass'
 
 function Dashboard() {
 
@@ -45,7 +46,7 @@ function Dashboard() {
             </div>
             <MyClass />
             <AddScore />
-            {admin && (<TBmark />)}
+            {admin && (<><ChangeClass /><TBmark /></>)}
             
         </>
     )
