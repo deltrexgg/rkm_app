@@ -35,6 +35,10 @@ function Register() {
             alert("Wrong Email Format");
             return;
         }
+        if (isNaN(myclass) || myclass > 12 || myclass < 5 || division.length !== 1) {
+            alert('Invalid Class');
+            return;
+          }
 
         // Set default values if myclass or division is empty
         const formattedClass = myclass ? myclass : "";

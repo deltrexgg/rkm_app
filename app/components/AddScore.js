@@ -26,10 +26,11 @@ function AddScore() {
       return;
     }
 
-    if(classValue > 12 || classValue < 5 ){
+    if (isNaN(classValue) || classValue > 12 || classValue < 5 || division.length !== 1) {
       setError('Invalid Class');
       return;
     }
+      
 
     if(localStorage.getItem('myclass') == classValue+division.toUpperCase()){
       setError('Cannot grade your class')
@@ -95,7 +96,7 @@ function AddScore() {
       return;
     }
 
-    if(classValue > 12 || classValue < 5){
+    if (isNaN(classValue) || classValue > 12 || classValue < 5 || division.length !== 1) {
       setError('Invalid Class');
       return;
     }

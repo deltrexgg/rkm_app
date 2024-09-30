@@ -1,6 +1,6 @@
 body{
     margin: 0px;
-    background-color: rgb(255, 255, 225);
+    background-color: rgb(255, 255, 237);
 }
 
 .teacher-input{
@@ -14,7 +14,6 @@ body{
     height: 40px;
     padding: 10px;
     border: 1px solid;
-    border-radius: 15px;
     
     /* Flexbox centering */
     display: flex;
@@ -69,23 +68,21 @@ body{
     background-color: rgb(255, 255, 255);
     padding: 10px;
     border: 1px solid;
-    border-radius: 15px;
 }
 
 .logbtn{
-    text-align: center;
-    border-radius: 5px;
-    padding: 2px;
-    cursor: pointer;
-    background-color: rgb(255, 113, 113);
+    border-radius: 6px;
+    padding: 4px;
+    background-color: rgb(255, 91, 91);
+    box-shadow: 1px 2px;
+    border: 0cap;
 }
 
 .add{
-    border-radius: 10px;
     border: 1px solid;
     padding: 15px;
     text-align: center;
-    background-color: aliceblue;
+    background-color: rgb(240, 241, 241);
 }
 
 .score-input{
@@ -168,7 +165,10 @@ body{
 
 .reqbtn{
     border-radius: 6px;
-    padding: 3px;
+    padding: 4px;
+    background-color: white;
+    box-shadow: 1px 2px;
+    border: 0cap;
 }
 
 .qoute{

@@ -37,11 +37,11 @@ function Dashboard() {
     return (
         <>
             <div className='dashhead'>
-                {user}
+                {user.toUpperCase()}
                 <div className='action-div'>
                 {admin && (<><button className='reqbtn' onClick={handleReq}>Request</button>&nbsp; 
                 <button className='reqbtn' onClick={handlescore}>Score</button></>)} &nbsp;
-                    <span onClick={logout} className='logbtn'>Logout</span>
+                    <button onClick={logout} className='logbtn'>Logout</button>
                 </div>
             </div>
             <MyClass />

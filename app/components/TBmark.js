@@ -180,7 +180,7 @@ function TBmark() {
           <button type='submit' className='addscore' onClick={handleAddScore}>Add Score</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <button className='removescore' onClick={handleReduceScore}>Reduce Score</button>
           {error && <p style={{ color: 'red' }}>{error}</p>}<br /><br />
-          <button onClick={handleShowlist}>Show List</button>
+          <button className='reqbtn' onClick={handleShowlist}>Show List</button>
         </div>
         {showList && (<TBlist />)}
       </>
