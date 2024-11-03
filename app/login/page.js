@@ -18,7 +18,7 @@ function Login() {
     try {
       const usersCollection = collection(db, 'teacher');
       
-      const q = query(usersCollection, where('email', '==', email));
+      const q = query(usersCollection, where('email', '==', email.toLowerCase()));
       const querySnapshot = await getDocs(q);
       
       if (!querySnapshot.empty) {

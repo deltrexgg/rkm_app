@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, getDocs, query, where } from 'firebase/firestore';
 import db from '@/utils/firestore';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -25,6 +25,18 @@ function Register() {
 
     const register = async (event) => {
         event.preventDefault();
+                // Set default values if myclass or division is empty
+                const formattedClass = myclass ? myclass : "";
+                const formattedDivision = division ? division.toUpperCase() : "";
+
+        const teacherCollection = collection(db, 'teacher');
+        const q = query(teacherCollection, where('myclass', '==', formattedClass + formattedDivision));
+        const querySnapshot = await getDocs(q);
+
+        if(!querySnapshot.empty){
+            alert("Class teacher exists");
+            return;
+        }
         
         if (password !== confirmPassword) {
             alert("Passwords do not match");
@@ -35,20 +47,19 @@ function Register() {
             alert("Wrong Email Format");
             return;
         }
+
+        if (myclass){
         if (isNaN(myclass) || myclass > 12 || myclass < 5 || division.length !== 1) {
             alert('Invalid Class');
             return;
           }
-
-        // Set default values if myclass or division is empty
-        const formattedClass = myclass ? myclass : "";
-        const formattedDivision = division ? division.toUpperCase() : "";
+        }
         
         try {
             const docRef = await addDoc(collection(db, "teacherreq"), {
                 username: username,
                 password: password,
-                email: email,
+                email: email.toLowerCase(),
                 admin: false,
                 myclass: formattedClass + formattedDivision
             });
