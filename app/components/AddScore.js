@@ -48,7 +48,7 @@ function AddScore() {
       const newWeekData = {
         ...weekData,
         [weekRange]: {
-          mark: (weekData[weekRange]?.mark || 0) + ((Number(score)/10)*100),
+          mark: (weekData[weekRange]?.mark || 0) + ((Number(score)/5)*100),
           count: (weekData[weekRange]?.count || 0) + 1,
         },
       };
@@ -56,7 +56,7 @@ function AddScore() {
       const newMonthData = {
         ...monthData,
         [currentMonth]: {
-          mark: (monthData[currentMonth]?.mark || 0) + ((Number(score)/10)*100),
+          mark: (monthData[currentMonth]?.mark || 0) + ((Number(score)/5)*100),
           count: (monthData[currentMonth]?.count || 0) + 1,
         },
       };
@@ -64,7 +64,7 @@ function AddScore() {
       const newYearData = {
         ...yearData,
         [currentYear]: {
-          mark: (yearData[currentYear]?.mark || 0) + ((Number(score)/10)*100),
+          mark: (yearData[currentYear]?.mark || 0) + ((Number(score)/5)*100),
           count: (yearData[currentYear]?.count || 0) + 1,
         },
       };

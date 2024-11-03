@@ -15,7 +15,7 @@ function Score() {
         <>
         <div className='dashhead'>
             <div className='action-div'>
-            <button onClick={goback} >Go back</button>
+            <button className='reqbtn' onClick={goback} >Go back</button>
             </div>
         </div>
         <ScoreList />

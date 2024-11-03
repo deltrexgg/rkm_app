@@ -34,13 +34,18 @@ function Dashboard() {
     const handlescore = () => {
         route.push('/score')
     }
+    const handleTeacherslist = () => {
+        route.push('/teacherslist')
+    }
+
     return (
         <>
             <div className='dashhead'>
                 {user.toUpperCase()}
                 <div className='action-div'>
                 {admin && (<><button className='reqbtn' onClick={handleReq}>Request</button>&nbsp; 
-                <button className='reqbtn' onClick={handlescore}>Score</button></>)} &nbsp;
+                <button className='reqbtn' onClick={handlescore}>Score</button>&nbsp; 
+                <button className='reqbtn' onClick={handleTeacherslist}>Teacher's</button></>)} &nbsp;
                     <button onClick={logout} className='logbtn'>Logout</button>
                 </div>
             </div>
